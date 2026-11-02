@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>کهکشان‌نگر | سفر به منظومه‌ی شمسی</title>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#070B1F;--surface:#0F1636;--ink:#EEF1FF;--muted:#A3ADD6;--sun:#FF9A3D;--ice:#74D9FF;--line:#222C5C;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#070B1F;--surface:#0F1636;--ink:#EEF1FF;--muted:#A3ADD6;--line:#222C5C}}
+:root[data-theme="dark"]{--bg:#070B1F;--surface:#0F1636;--ink:#EEF1FF;--muted:#A3ADD6;--line:#222C5C}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Vazirmatn",Tahoma,sans-serif;line-height:1.9;
+  background-image:radial-gradient(1.5px 1.5px at 20% 30%,#fff9,transparent),radial-gradient(1px 1px at 70% 20%,#fff8,transparent),radial-gradient(1.5px 1.5px at 85% 70%,#fff9,transparent),radial-gradient(1px 1px at 40% 80%,#fff7,transparent),radial-gradient(1px 1px at 10% 90%,#fff7,transparent);
+  background-size:420px 420px}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--ice);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-weight:800;font-size:1.4rem;color:var(--ice)}
+nav a{margin-inline-start:22px;font-size:.95rem;color:var(--muted)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:30px 0 70px}
+h1{font-size:clamp(2rem,5.5vw,3.6rem);line-height:1.4;font-weight:800;margin:0 0 18px}
+.hero p{font-weight:300;font-size:1.1rem;color:var(--muted);max-width:30rem;margin:0 0 30px}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:600;border:1.5px solid var(--ice)}
+.btn.fill{background:var(--ice);color:#06122E}
+.btn.ghost{margin-inline-start:10px;color:var(--ice)}
+.sys{width:100%;max-width:400px;margin:0 auto;display:block}
+.orbit{transform-origin:200px 200px;animation:spin linear infinite}
+.o1{animation-duration:14s}.o2{animation-duration:26s}.o3{animation-duration:44s}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion: reduce){.orbit{animation:none}}
+section{padding:68px 0}
+h2{font-size:clamp(1.5rem,3.5vw,2.2rem);margin:0 0 10px;font-weight:800}
+.sub{color:var(--muted);margin:0 0 34px;max-width:36rem}
+.planets{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.pl{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:22px 18px}
+.dot{width:54px;height:54px;border-radius:50%;margin-bottom:14px;box-shadow:inset -10px -8px 16px #0007}
+.pl b{font-size:1.1rem;display:block}
+.pl span{font-size:.9rem;color:var(--muted)}
+.facts{background:var(--surface);border-block:1px solid var(--line)}
+.f-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.f-grid h3{margin:0 0 6px;font-size:1.15rem;color:var(--sun)}
+.f-grid p{margin:0;color:var(--muted)}
+.cta{text-align:center;border-radius:28px;padding:56px 24px;background:radial-gradient(circle at 50% 120%,#FF9A3D55,transparent 60%),var(--surface);border:1px solid var(--line)}
+.cta p{color:var(--muted);margin:0 0 26px}
+footer{padding:30px 0 40px;color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
+@media(max-width:820px){
+  .hero-grid{grid-template-columns:1fr;padding-bottom:46px}
+  .sys{max-width:270px;order:-1}
+  .planets{grid-template-columns:repeat(2,1fr)}
+  .f-grid{grid-template-columns:1fr;gap:22px}
+  nav a:not(:last-child){display:none}
+  section{padding:50px 0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">کهکشان‌نگر</div>
+    <nav><a href="#planets">سیاره‌ها</a><a href="#facts">دانستنی‌ها</a><a href="#join">عضویت</a></nav>
+  </header>
+  <div class="hero-grid hero">
+    <div>
+      <h1>سفری به منظومه‌ی شمسی، از خانه</h1>
+      <p>هشت سیاره، هزاران ستاره و یک آسمان پر از پرسش. اینجا نجوم را ساده و جذاب یاد می‌گیرید.</p>
+      <a class="btn fill" href="#planets">شروع سفر</a>
+      <a class="btn ghost" href="#join">دریافت خبرنامه</a>
+    </div>
+    <svg class="sys" viewBox="0 0 400 400" role="img" aria-label="خورشید و سیاره‌هایی که دور آن می‌چرخند">
+      <defs>
+        <radialGradient id="sun"><stop offset="0" stop-color="#FFE29A"/><stop offset=".6" stop-color="#FF9A3D"/><stop offset="1" stop-color="#FF9A3D" stop-opacity="0"/></radialGradient>
+      </defs>
+      <circle cx="200" cy="200" r="70" fill="url(#sun)"/>
+      <circle cx="200" cy="200" r="26" fill="#FFB85C"/>
+      <g fill="none" stroke="#2B3770" stroke-width="1.5">
+        <circle cx="200" cy="200" r="78"/><circle cx="200" cy="200" r="125"/><circle cx="200" cy="200" r="172"/>
+      </g>
+      <g class="orbit o1"><circle cx="278" cy="200" r="8" fill="#C9B7A3"/></g>
+      <g class="orbit o2"><circle cx="200" cy="75" r="13" fill="#4C9AFF"/><circle cx="200" cy="75" r="13" fill="none" stroke="#fff3" stroke-width="2"/></g>
+      <g class="orbit o3"><circle cx="372" cy="200" r="16" fill="#D9A066"/><ellipse cx="372" cy="200" rx="28" ry="6" fill="none" stroke="#E8CFA0" stroke-width="3"/></g>
+    </svg>
+  </div>
+</div>
+
+<section id="planets">
+  <div class="wrap">
+    <h2>هشت سیاره‌ی منظومه‌ی شمسی</h2>
+    <p class="sub">از نزدیک‌ترین به خورشید تا دورترین؛ با یک نکته‌ی شگفت‌انگیز درباره‌ی هر کدام.</p>
+    <div class="planets">
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#CFC4B6,#8C8277)"></div><b>عطارد</b><span>سالش فقط ۸۸ روز زمینی است.</span></div>
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#F5D9A0,#C28B3B)"></div><b>زهره</b><span>داغ‌ترین سیاره، با حدود ۴۶۵ درجه‌ی سانتی‌گراد.</span></div>
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#7CC1FF,#1F5FBF 60%,#2E8B57)"></div><b>زمین</b><span>تنها سیاره‌ای که تاکنون حیات در آن شناخته شده.</span></div>
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#F29A74,#B3462A)"></div><b>مریخ</b><span>بلندترین کوه منظومه، المپوس، حدود ۲۵ کیلومتر ارتفاع دارد.</span></div>
+      <div class="pl"><div class="dot" style="background:repeating-linear-gradient(0deg,#E9C9A0 0 8px,#B98456 8px 16px)"></div><b>مشتری</b><span>بزرگ‌ترین سیاره؛ طوفان لکه‌ی سرخش قرن‌هاست ادامه دارد.</span></div>
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#F3E2B0,#C9A55E)"></div><b>کیوان (زحل)</b><span>حلقه‌های درخشانش از یخ و سنگ ساخته شده‌اند.</span></div>
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#B7F0F0,#4FB6C4)"></div><b>اورانوس</b><span>به پهلو چرخیده و هر سالش ۸۴ سال زمینی است.</span></div>
+      <div class="pl"><div class="dot" style="background:radial-gradient(circle at 30% 30%,#7F9BFF,#2A3FBF)"></div><b>نپتون</b><span>دورترین سیاره، با بادهایی بسیار سریع‌تر از صدا.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="facts" id="facts">
+  <div class="wrap">
+    <h2>بدانید که</h2>
+    <p class="sub">چند نکته برای شروع:</p>
+    <div class="f-grid">
+      <div><h3>نور خورشید ۸ دقیقه راه است</h3><p>نوری که امروز می‌بینید، حدود هشت دقیقه پیش از خورشید راه افتاده است.</p></div>
+      <div><h3>یک روز در زهره از سالش بلندتر است</h3><p>زهره آنقدر آهسته به دور خودش می‌چرخد که یک شبانه‌روزش از سالش طولانی‌تر است.</p></div>
+      <div><h3>با چشم غیرمسلح هم می‌توانید ببینید</h3><p>زهره، مریخ، مشتری و کیوان را بدون تلسکوپ هم می‌شود در آسمان شب پیدا کرد.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="join">
+  <div class="wrap">
+    <div class="cta">
+      <h2>آسمان شب را با ما بشناسید</h2>
+      <p>هر هفته یک رویداد نجومی و یک نکته‌ی تازه برایتان می‌فرستیم.</p>
+      <a class="btn fill" href="https://www.noojum.com/" target="_blank">عضویت در خبرنامه</a>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
+  <footer><span>© کهکشان‌نگر: هانیه بازگیر</span><span>haniehbazgir2007@gmail.com</span></footer>
+</div>
+</body>
+</html>
